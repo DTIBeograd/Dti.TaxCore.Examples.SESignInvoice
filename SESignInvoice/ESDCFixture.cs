@@ -127,7 +127,6 @@ namespace Dti.TaxCore.Examples.SESignInvoice
 
         private CommandApdu GetSelectAppBytes(IsoReader isoReader)
         {
-            // Send SELECT command
             return new CommandApdu(IsoCase.Case4Short, isoReader.ActiveProtocol)
             {
                 CLA = 0x00,
@@ -164,6 +163,8 @@ namespace Dti.TaxCore.Examples.SESignInvoice
 
         #endregion
 
+        #region Support
+
         private byte[] ConvertUInt64To8ByteBigEndianArray(UInt64 counter)
         {
             return BitConverter.GetBytes(counter).Reverse().ToArray();
@@ -190,5 +191,7 @@ namespace Dti.TaxCore.Examples.SESignInvoice
             listOfInts.Reverse();
             return listOfInts.ToArray();
         }
+
+        #endregion
     }
 }
