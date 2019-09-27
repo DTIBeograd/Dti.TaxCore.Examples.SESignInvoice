@@ -1,5 +1,5 @@
 # SESignInvoice
-This application shows how to generate and send APDU coommands to the TaxCore Secure Element
+This application shows how to generate and send APDU commands to the TaxCore Secure Element
 
 ### Requirements
 
