@@ -7,7 +7,7 @@ This application shows how to generate and send APDU coommands to the TaxCore Se
 * Initialized Smart Card with TaxCore Secure Element Applet
 
 ### Guide
-* Set PIN of Initialized Smart Card in Application Setting
+* Set PIN of Initialized Smart Card in the Application Setting
 * Execute SignInvoice() test method
 
 ##### Note
