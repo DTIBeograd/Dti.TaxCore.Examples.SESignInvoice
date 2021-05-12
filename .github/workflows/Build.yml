@@ -44,7 +44,7 @@ jobs:
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"DTIBeograd_Dti.TaxCore.Examples.SESignInvoice" /o:"dtibeograd" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
       - name: MSBuild
-        working-directory: "Dti.TaxCore.Examples.SESignInvoice"
+        working-directory: "DTIBeograd_Dti.TaxCore.Examples.SESignInvoice"
         run: msbuild "SESignInvoice.sln"
       - name: Build and analyze
         shell: powershell
