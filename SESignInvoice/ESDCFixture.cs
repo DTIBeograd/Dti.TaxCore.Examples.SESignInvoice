@@ -8,6 +8,7 @@ using PCSC.Iso7816;
 namespace Dti.TaxCore.Examples.SESignInvoice
 {
     [TestClass]
+    
     public class ESDCFixture
     {
         [TestMethod]
