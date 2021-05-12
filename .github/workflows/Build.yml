@@ -43,10 +43,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"DTIBeograd_Dti.TaxCore.Examples.SESignInvoice" /o:"dtibeograd" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-      - name: MSBuild
-        working-directory: src
-        run: msbuild "https://github.com/DTIBeograd/Dti.TaxCore.Examples.SESignInvoice/blob/master/SESignInvoice.sln"
-      - name: Build and analyze
-        shell: powershell
-        run: |
+          Install-Module -Name Invoke-MsBuild
+          Invoke-MsBuild -Path "..\..\SESignInvoice.sln"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
